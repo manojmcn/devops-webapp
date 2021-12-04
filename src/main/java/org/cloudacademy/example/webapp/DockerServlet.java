@@ -21,6 +21,7 @@ import com.github.dockerjava.api.model.Container;
 
 import java.util.List;
 import java.util.Arrays;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Collections;
 
@@ -81,6 +82,8 @@ public class DockerServlet extends HttpServlet {
             containerIp = "unknown";
         }
 
+        request.setAttribute("containerid", containerId);
+        request.setAttribute("containerip", containerIp);
         request.setAttribute("containerid", containerId);
         request.setAttribute("containerip", containerIp);
 
